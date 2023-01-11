@@ -10,20 +10,23 @@ LinkPropertiesChanged,
 BlockedStatusChanged
 
 # How to add
+```
 allprojects {
 	repositories {
 		...
 		maven { url 'https://jitpack.io' }
 	}
 }
-
+```
 ===========================================
-
+```
 dependencies {
-	implementation 'com.github.Konbitech:Internet:Tag'
+	implementation 'com.github.Konbitech:Internet:0.0.1'
 }
+```
 
 # How to use
+```
 val internet = Internet(requireContext())
 viewLifecycleOwner.lifecycleScope.launch {
 	launch {
@@ -36,7 +39,9 @@ viewLifecycleOwner.lifecycleScope.launch {
 				}
 				else -> {}
 			}
-			binding.textviewFirst.text = status.name
+			// TODO: Do something with status
+			//binding.textviewFirst.text = status.name
 		}
 	}
 }
+```
